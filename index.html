@@ -1,19 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Analytics Demo</title>
+    <title>Analytics Demo Landing Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 80px;
+            background-color: #f5f7fb;
+        }
+
+        h1 {
+            color: #1f3b57;
+            font-size: 36px;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 14px 24px;
+            margin: 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #signup-btn {
+            background-color: #2d6cdf;
+            color: white;
+        }
+
+        #demo-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+    </style>
+
+    <!-- ========================= -->
+    <!-- AMPLITUDE SCRIPT GOES HERE -->
+    <!-- Paste the script they give you in your setup link -->
+    <!-- Example format only:
+    <script src="https://cdn.amplitude.com/script.js"></script>
+    <script>
+        amplitude.init("YOUR_API_KEY");
+    </script>
+    -->
+    <!-- ========================= -->
+
 </head>
+
 <body>
 
     <h1>Analytics Demo Platform</h1>
 
-    <p>
-        Understand customer behavior with powerful analytics.
-    </p>
+    <p>Understand customer behavior with powerful analytics.</p>
 
     <button id="signup-btn">Sign Up</button>
 
     <button id="demo-btn">Request Demo</button>
+
+    <script>
+        // Track Sign Up button click
+        document.getElementById("signup-btn").addEventListener("click", function () {
+            console.log("Sign Up Clicked");
+
+            if (typeof amplitude !== "undefined") {
+                amplitude.track("Sign Up Clicked");
+            }
+        });
+
+        // Track Request Demo button click
+        document.getElementById("demo-btn").addEventListener("click", function () {
+            console.log("Request Demo Clicked");
+
+            if (typeof amplitude !== "undefined") {
+                amplitude.track("Request Demo Clicked");
+            }
+        });
+    </script>
 
 </body>
 </html>
