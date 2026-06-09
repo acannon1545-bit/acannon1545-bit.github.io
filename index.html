@@ -6,43 +6,62 @@
     <script>
       window.amplitude.init('3712151faabbed74138cffa0f63cc2ad');
     </script>
-    <style>
-        body {
-            font-family: Times New Roman, Times;
-            text-align: center;
-            margin-top: 80px;
-            background-color: #f5f7fb;
-        }
-        h1 {
-            color: #1f3b57;
-            font-size: 36px;
-            background-color: grey;
-        }
-        p {
-            color: #555;
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-        button {
-            padding: 14px 24px;
-            margin: 10px;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        #signup-btn {
-            background-color: #2d6cdf;
-            color: white;
-        }
-        #demo-btn {
-            background-color: lightyellow;
-            color: grey;
-        }
-        button:hover {
-            opacity: 0.85;
-        }
-    </style>
+<style>
+    body {
+        font-family: Courier, "Courier New", monospace;
+        text-align: center;
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(to bottom, orange, yellow);
+        
+        /* Centers content and provides even spacing */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    h1 {
+        color: #1f3b57;
+        font-size: 36px;
+        margin: 0;
+    }
+
+    p {
+        color: #555;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    button {
+        padding: 14px 24px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #signup-btn {
+        background-color: lightblue;
+        color: black;
+    }
+
+    #demo-btn {
+        background-color: lightgreen;
+        color: black;
+    }
+
+    button:hover {
+        opacity: 0.85;
+    }
+
+    /* Container for buttons to keep spacing even */
+    .button-container {
+        display: flex;
+        gap: 20px;
+    }
+</style>
 </head>
 <body>
     <h1>Analytics Demo Platform</h1>
