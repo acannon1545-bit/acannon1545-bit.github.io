@@ -2,27 +2,27 @@
 <html>
 <head>
     <title>Analytics Demo Landing Page</title>
-
-</script>    <style>
+    <script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script>
+    <script>
+      window.amplitude.init('3712151faabbed74138cffa0f63cc2ad');
+    </script>
+    <style>
         body {
             font-family: Times New Roman, Times;
             text-align: center;
             margin-top: 80px;
             background-color: #f5f7fb;
         }
-
         h1 {
             color: #1f3b57;
             font-size: 36px;
             background-color: grey;
         }
-
         p {
             color: #555;
             font-size: 18px;
             margin-bottom: 30px;
         }
-
         button {
             padding: 14px 24px;
             margin: 10px;
@@ -31,60 +31,37 @@
             font-size: 16px;
             cursor: pointer;
         }
-
         #signup-btn {
             background-color: #2d6cdf;
             color: white;
         }
-
         #demo-btn {
-            background-color: light yellow;
+            background-color: lightyellow;
             color: grey;
         }
-
         button:hover {
             opacity: 0.85;
         }
     </style>
-      <script type="text/javascript">
-        !function(){"use strict";!function(e,t){var
-  r=e.amplitude||{_q:[],_iq:{}};
-        // ... (full snippet from Amplitude's docs)
-        }(window,document)}();
-
-        amplitude.init('3712151faabbed74138cffa0f63cc2ad');
-      </script>
 </head>
-
 <body>
-
     <h1>Analytics Demo Platform</h1>
-
     <p>Understand customer behavior with powerful analytics.</p>
-
     <button id="signup-btn">Sign Up</button>
-
     <button id="demo-btn">Request Demo</button>
-
     <script>
-        // Track Sign Up button click
         document.getElementById("signup-btn").addEventListener("click", function () {
             console.log("Sign Up Clicked");
-
             if (typeof amplitude !== "undefined") {
                 amplitude.track("Sign Up Clicked");
             }
         });
-
-        // Track Request Demo button click
         document.getElementById("demo-btn").addEventListener("click", function () {
             console.log("Request Demo Clicked");
-
             if (typeof amplitude !== "undefined") {
                 amplitude.track("Request Demo Clicked");
             }
         });
     </script>
-
 </body>
 </html>
